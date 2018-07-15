@@ -4,7 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-
+import * as firebase from 'firebase';
+var config = {
+  apiKey: "AIzaSyDUN22x4B43_Es8fimX_7oNtBJ1Elrl29E",
+  authDomain: "chang-teum.firebaseapp.com",
+  databaseURL: "https://chang-teum.firebaseio.com",
+  projectId: "chang-teum",
+  storageBucket: "chang-teum.appspot.com",
+  messagingSenderId: "27231619735"
+};
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,6 +25,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      firebase.initializeApp(config);
     });
   }
 }

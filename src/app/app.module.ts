@@ -14,7 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { KakaoMapsModule } from 'kakao-maps-sdk';
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { HttpClient } from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpClient,
+    Geolocation,
   ]
 })
 export class AppModule {}
