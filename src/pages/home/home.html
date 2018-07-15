@@ -1,6 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end *ngIf="loginChk">
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end *ngIf="!loginChk">
+      <button ion-button icon-only  (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
