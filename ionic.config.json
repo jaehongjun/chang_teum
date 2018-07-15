@@ -1,0 +1,8 @@
+{
+  "name": "startupHelper",
+  "app_id": "e0848eb1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
