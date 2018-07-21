@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { KakaoMapsModule } from 'kakao-maps-sdk';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient } from '@angular/common/http';
+import { MapsProvider } from '../providers/maps/maps';
 @NgModule({
   declarations: [
     MyApp,
@@ -48,6 +49,7 @@ import { HttpClient } from '@angular/common/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpClient,
     Geolocation,
+    MapsProvider,
   ]
 })
 export class AppModule {}
