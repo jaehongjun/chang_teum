@@ -17,6 +17,9 @@ import { KakaoMapsModule } from 'kakao-maps-sdk';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient } from '@angular/common/http';
 import { MapsProvider } from '../providers/maps/maps';
+import { UtilProvider } from '../providers/util/util';
+import { CommonServie } from '../providers/util/common.servie';
+import { LoaderProvider } from '../providers/loader/loader';
 @NgModule({
   declarations: [
     MyApp,
@@ -50,6 +53,9 @@ import { MapsProvider } from '../providers/maps/maps';
     HttpClient,
     Geolocation,
     MapsProvider,
+    UtilProvider,
+    CommonServie,
+    LoaderProvider,
   ]
 })
 export class AppModule {}

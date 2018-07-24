@@ -60,7 +60,12 @@ $colors: (
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+.md{
+  ion-content {
+    style:"width: 80%",
 
+  }
+}
 
 
 // App Theme
