@@ -3,48 +3,48 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { ChartPage } from '../pages/chart/chart';
-import { TabsPage } from '../pages/tabs/tabs';
-import { LocatePage } from '../pages/locate/locate';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { KakaoMapsModule } from 'kakao-maps-sdk';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient } from '@angular/common/http';
 import { MapsProvider } from '../providers/maps/maps';
-import { UtilProvider } from '../providers/util/util';
 import { CommonServie } from '../providers/util/common.servie';
 import { LoaderProvider } from '../providers/loader/loader';
+import { HomePageModule } from '../pages/home/home.module';
+import { ChartPageModule } from '../pages/chart/chart.module'
+import { TabsPageModule } from '../pages/tabs/tabs.module'
+import { ContactPageModule } from '../pages/contact/contact.module'
+import { AboutPageModule } from '../pages/about/about.module'
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    ChartPage,
-    LocatePage,
+    // ContactPage,
+    // HomePage,
+    // TabsPage,
+    // ChartPage,
+    // LocatePage,
   ],
   imports: [
     BrowserModule,
-    KakaoMapsModule,
+    // KakaoMapsModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
+    HomePageModule ,
+ChartPageModule ,
+TabsPageModule ,
+ContactPageModule,
+AboutPageModule ,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    ChartPage,
-    LocatePage,
+    // ContactPage,
+    // HomePage,
+    // TabsPage,
+    // ChartPage,
+    // LocatePage,
   ],
   providers: [
     StatusBar,
@@ -53,7 +53,6 @@ import { LoaderProvider } from '../providers/loader/loader';
     HttpClient,
     Geolocation,
     MapsProvider,
-    UtilProvider,
     CommonServie,
     LoaderProvider,
   ]

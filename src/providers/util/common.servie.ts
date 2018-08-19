@@ -25,13 +25,13 @@ export class CommonServie{
     queryParams += '&' + encodeURIComponent('type') + '=' + encodeURIComponent('json');
     /* 리소스를 식별하기 위한 id. */
 //     this._http.get(url+queryParams, { "Headers" : this.headers })
-
+    console.log(queryParams);
     this.http.get(this.url + queryParams).subscribe(data => {
       console.log(JSON.stringify(data));
     });
   }
 
-  storeListInRadius(radius,cx,cy){
+  storeListInRadius(radius,cx,cy,indsLclsCd,indsMclsCd,indsSclsCd){
 
 
     var queryParams = 'storeListInRadius?' + encodeURIComponent('ServiceKey') + '=TztU36F%2FW%2FmBHdEf7%2BC2ztZDLtWtwik8brppbN8YzKLytXwT2jodh2hCR%2FSjIPBTOX9f3H%2BQynKwQWnEEjsCKQ%3D%3D';
@@ -40,13 +40,16 @@ export class CommonServie{
     /* 리소스를 식별하기 위한 id. */
     queryParams += '&' + encodeURIComponent('cx') + '=' + encodeURIComponent(cx);
     queryParams += '&' + encodeURIComponent('cy') + '=' + encodeURIComponent(cy);
-    queryParams += '&' + encodeURIComponent('indsLclsCd') + '=' + encodeURIComponent('Q');
-    queryParams += '&' + encodeURIComponent('indsMclsCd') + '=' + encodeURIComponent('Q12');
+    queryParams += '&' + encodeURIComponent('indsLclsCd') + '=' + encodeURIComponent(indsLclsCd);
+    queryParams += '&' + encodeURIComponent('indsMclsCd') + '=' + encodeURIComponent(indsMclsCd);
+    queryParams += '&' + encodeURIComponent('indsSclsCd') + '=' + encodeURIComponent(indsSclsCd);
+    queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('1000');
+
     /* 리소스를 식별하기 위한 id. */
     queryParams += '&' + encodeURIComponent('type') + '=' + encodeURIComponent('json');
     /* 리소스를 식별하기 위한 id. */
 //     this._http.get(url+queryParams, { "Headers" : this.headers })
-
+      console.log(queryParams);
      return this.http.get(this.url + queryParams).map(data => {
 
       this.result = data;
@@ -64,7 +67,7 @@ export class CommonServie{
     return this.http.get(this.url + queryParams).map(data => {
 
       this.result = data;
-      console.log(JSON.stringify(data)) ;
+      // console.log(JSON.stringify(data)) ;
       return  this.result;
     });
   }
@@ -79,16 +82,16 @@ export class CommonServie{
     return this.http.get(this.url + queryParams).map(data => {
 
       this.result = data;
-      console.log(JSON.stringify(data)) ;
+      // console.log(JSON.stringify(data)) ;
       return  this.result;
     });
   }
-  smallUpjongList(indsLclsCd, indsSclsNm){
+  smallUpjongList(indsLclsCd, indsMclsCd){
 
     var queryParams = 'smallUpjongList?' + encodeURIComponent('ServiceKey') + '=TztU36F%2FW%2FmBHdEf7%2BC2ztZDLtWtwik8brppbN8YzKLytXwT2jodh2hCR%2FSjIPBTOX9f3H%2BQynKwQWnEEjsCKQ%3D%3D';
     /* Service Key*/
     queryParams += '&' + encodeURIComponent('indsLclsCd') + '=' + encodeURIComponent(indsLclsCd);
-    queryParams += '&' + encodeURIComponent('indsSclsNm') + '=' + encodeURIComponent(indsSclsNm);
+    queryParams += '&' + encodeURIComponent('indsMclsCd') + '=' + encodeURIComponent(indsMclsCd);
     queryParams += '&' + encodeURIComponent('type') + '=' + encodeURIComponent('json');
 
     return this.http.get(this.url + queryParams).map(data => {
